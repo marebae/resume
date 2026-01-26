@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"content="IE-edge">
+    <meta name="viewport" content="width-device-width", initial-scale="1.0">
+    <title>Mary's Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f258360731.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <h1>Mary Bauta</h1>
+             <p>IT Student</p>
+        </div>
+    </div> 
+</div>
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="https://github.com/marebae/portfolio.github.io/blob/main/images/piccute.JPG?raw=true">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>An aspiring IT student who is driven to help others while pursuing my passion of innovation and creation. I hope to gain experience and do what I love most in a work setting.
+
+</p>
+            
+            
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Web Development</span><br>Designing Web interfaces</li>
+                    <li><span>Team Collaboration</span><br>Communication/Organized/Adaptable</li>
+                    <li><span>Social Media Management</span><br>Video/Photo Production</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="projects">
+                <ul>
+                    <li><span>Web Developer</span><br>SHPE UCF Website</li>
+                    <li><span>Front-End Developer</span><br>SensAI</li>
+                  <li><span>Front-End Developer/Team Leader</span><br>AesthetiQR</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>Expected in Dec 2026</span><br>BS in Information Technology from the University of Central Florida</li>
+                </ul>
+            </div>
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>ma900211@ucf.edu</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/mary-bauta-a76753292/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <h1>My Resume</h1>
+                <p>Click the link below to download my resume.</p>
+                <a href="https://github.com/marebae/portfolio.github.io/blob/main/images/resume%20updated.png?raw=true" download="Your_Resume.jpg" class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="copyright">
+        <p>Copyright ©️ Mary. Made with <i class="fa-solid fa-heart"></i> by Mary</p>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemenu = document.getElementbyId("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwbN0QPhkCNZd_TmqvWfce_CsitCxhDNdrAMoBsvnKKSSzxhC-JpvalXQ9UCTbona4i/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
