@@ -1,0 +1,357 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #000;
+    background-color: #fff;
+}
+
+/* Header with Centered Name */
+header {
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.name-intro h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.name-intro h1 strong {
+    font-weight: 300;
+}
+
+.subtitle {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Main Content */
+main {
+    padding: 40px 20px;
+    max-width: 100%;
+}
+
+/* About Section - Full Width */
+.about-section {
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.about-section p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* Two Column Sections */
+.two-column-section {
+    margin-bottom: 50px;
+}
+
+.column {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+p {
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 0.95rem;
+    font-weight: 300;
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+}
+
+ul li::before {
+    content: "◉";
+    position: absolute;
+    left: 0;
+    font-size: 0.7rem;
+}
+
+ul li a {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+    transition: opacity 0.2s;
+}
+
+ul li a:hover {
+    opacity: 0.6;
+}
+
+/* Footer with Black Contact Box */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+    margin-top: 60px;
+}
+
+.contact-box h2 {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 20px;
+}
+
+.contact-box p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.contact-box a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+    transition: opacity 0.2s;
+}
+
+.contact-box a:hover {
+    opacity: 0.6;
+}
+
+/* Project Pages - Base Styles */
+nav {
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+nav a {
+    color: #000;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 300;
+    transition: opacity 0.2s;
+}
+
+nav a:hover {
+    opacity: 0.6;
+}
+
+article {
+    padding: 40px 20px;
+    max-width: 100%;
+}
+
+article h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: -1px;
+    margin-bottom: 40px;
+}
+
+article section {
+    margin-bottom: 40px;
+}
+
+article img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #e0e0e0;
+    margin: 20px 0;
+}
+
+/* Purple Accent for AesthetiQR */
+body.aestheticqr-page article h1 {
+    color: #6b46c1;
+}
+
+body.aestheticqr-page nav a {
+    color: #6b46c1;
+    border-bottom: 1px solid #6b46c1;
+}
+
+body.aestheticqr-page h2 {
+    border-bottom: 2px solid #9f7aea;
+}
+
+body.aestheticqr-page ul li::before {
+    color: #6b46c1;
+}
+
+/* Blue Accent for SHPE */
+body.shpe-page article h1 {
+    color: #2563eb;
+}
+
+body.shpe-page nav a {
+    color: #2563eb;
+    border-bottom: 1px solid #2563eb;
+}
+
+body.shpe-page h2 {
+    border-bottom: 2px solid #3b82f6;
+}
+
+body.shpe-page ul li::before {
+    color: #2563eb;
+}
+
+/* Desktop Styles (1200px+) */
+@media screen and (min-width: 1200px) {
+    header {
+        padding: 100px 120px;
+    }
+
+    .name-intro h1 {
+        font-size: 5rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    main {
+        padding: 80px 120px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .about-section {
+        margin-bottom: 80px;
+        padding-bottom: 50px;
+    }
+
+    .about-section p {
+        font-size: 1.2rem;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .two-column-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        margin-bottom: 80px;
+    }
+
+    .column {
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-size: 0.7rem;
+        letter-spacing: 2.5px;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    ul li {
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 60px 120px;
+    }
+
+    .contact-box {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    /* Project Pages Desktop - Better Distribution */
+    article {
+        padding: 80px 120px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    article h1 {
+        font-size: 4rem;
+        margin-bottom: 60px;
+        text-align: center;
+    }
+
+    article section {
+        margin-bottom: 80px;
+    }
+
+    article section h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    article section p,
+    article section ul {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    article img {
+        max-width: 1000px;
+        margin: 40px auto;
+        display: block;
+    }
+
+    nav {
+        padding: 30px 120px;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+}
+
+/* Very Large Screens */
+@media screen and (min-width: 1920px) {
+    header {
+        padding: 120px 200px;
+    }
+
+    main {
+        padding: 100px 200px;
+    }
+
+    footer {
+        padding: 80px 200px;
+    }
+
+    article {
+        padding: 100px 200px;
+    }
+
+    nav {
+        padding: 40px 200px;
+    }
+
+    .two-column-section {
+        gap: 120px;
+    }
+}
